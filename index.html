@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Coloring Page</title>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Interactive Coloring & Word Tracing</h1>
+  <div>
+    <canvas id="colorCanvas" width="500" height="500" style="border: 1px solid black;"></canvas>
+  </div>
+  <div>
+    <button onclick="changeColor('red')">Red</button>
+    <button onclick="changeColor('blue')">Blue</button>
+    <button onclick="changeColor('green')">Green</button>
+    <button onclick="clearCanvas()">Clear</button>
+  </div>
+  <div>
+    <label for="imageUpload">Upload an Image:</label>
+    <input type="file" id="imageUpload" accept="image/*">
+  </div>
+  <div>
+    <button onclick="loadTracingTemplate('Hello')">Trace 'Hello'</button>
+    <button onclick="loadTracingTemplate('Learn')">Trace 'Learn'</button>
+  </div>
+  <div>
+    <button id="confettiButton" onclick="triggerConfettiWithSound()">Celebrate!</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
